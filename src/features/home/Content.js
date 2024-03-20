@@ -2,8 +2,9 @@ import React from 'react'
 
 const Content = () => {
   return (
-    <div className=''>
-      <h1>Content</h1>
+    <div>
+      <h1>Contact us</h1>
+
     </div>
   )
 }
