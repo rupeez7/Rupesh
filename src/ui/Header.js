@@ -1,10 +1,16 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <div>
-      <h1 className='bg-sky-400 w-80 h-10 flex justify-center items-center'>Header</h1>
-    </div>
+    <div className='bg-black text-white px-5 flex items-baseline justify-between py-2'>
+      <h1>Rupesh Shrestha</h1>
+      <nav className='space-x-5 '>
+        <NavLink to={'/about'}>About</NavLink>
+        <NavLink to={'/content'}>Contact</NavLink>
+      </nav>
+
+    </div >
   )
 }
 
