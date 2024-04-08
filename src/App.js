@@ -1,32 +1,37 @@
-import React from 'react'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import About from './features/home/About'
-import Contact from './features/home/Contact'
-import NotFound from './ui/NotFound'
-import RootLayOut from './ui/RootLayout'
-import Main from './features/home/dashboard/Main'
-
+import { RouterProvider, createBrowserRouter } from "react-router-dom"
+import About from "./features/About";
+import Contact from "./features/Contact";
+import RootLayOut from "./ui/RootLayOut";
+import NotFound from "./ui/NotFound";
+import Home from "./features/Home";
 
 
 const App = () => {
+  // const p = { id: 1, p: 2 }
+  // const person = {
+  //   name: 'per',
+  //   ...p
+  // };
+
+
+
   const router = createBrowserRouter([
     {
       path: '/',
       element: <RootLayOut />,
       children: [
-        { index: true, element: <Main /> },
-        // { path: 'product/detail/:id', element: <Detail /> },
+        { index: true, element: <Home /> },
         { path: 'about', element: <About /> },
-        { path: 'content', element: <Contact /> },
+        { path: 'contact', element: <Contact /> },
         { path: '*', element: <NotFound /> },
-
       ]
-
     },
 
 
-  ])
+  ]);
+
+
+
   return <RouterProvider router={router} />
 }
-
 export default App

@@ -10,18 +10,25 @@ module.exports = {
       'sm': { 'max': '640px' },
     },
     extend: {
+      animation: {
+        border: 'border 4s ease infinite',
+      },
+      keyframes: {
+        border: {
+          '0%': { border: '4px solid black' },
+          '100%': { border: '12px solid green' },
+        },
+      },
       backgroundColor: {
         'common': 'pink'
       },
-
       gridTemplateColumns: {
-        'autoFit': 'repeat(auto-fit, minmax(350px, 1fr))'
-
+        'auto-fit': 'repeat(auto-fit, minmax(250px, 1fr))'
       }
-
     }
 
 
   },
   plugins: [],
-} 
+}
+
