@@ -30,6 +30,7 @@ const Header = () => {
         {show ? <button onClick={handleShow}><HiOutlineX size={25} /></button> : <button onClick={handleShow}><HiMenuAlt1 size={25} /></button>}
       </div>
       <nav className="space-x-4 sm:hidden">
+        <NavLink to='/dailyForm'>DailyForm</NavLink>
         <NavLink to='/about'> About</NavLink>
         <NavLink to='/contact'>Contact</NavLink>
       </nav>
