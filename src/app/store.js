@@ -1,10 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { dailySlice } from "../features/DailyBlogs/dailySlice";
-
-
-
+import { configureStore } from '@reduxjs/toolkit'
+import { postApi } from '../features/post/postApi';
 export const store = configureStore({
   reducer: {
-    dailySlice: dailySlice.reducer
-  }
+    [postApi.reducerPath]: postApi.reducer
+  },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat([
+    postApi.middleware
+  ])
 });
